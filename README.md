@@ -5,7 +5,7 @@ A command-line tool that find optimized PCR-primer for a given fasta file region
 Results of this tool follows somes rules:
 * 17 to 25 nucleotids-long primer
 * Primer has to end with a C or G
-* Both primer has to have the same hybridation temps  
+* Both primer need to have the same hybridation temps  
 
 To be implemented:
 * addition of restriction sites 
