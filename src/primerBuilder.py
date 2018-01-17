@@ -50,18 +50,18 @@ def primerHybridationTemp(primerSequence):
 	return allTemperature
 
 def sameHybridationTempPrimer(temperatureDict1, temperatureDict2):
-	succes = False
+	success = False
 	for key, value in temperatureDict1.items():
 		for key2, value2 in temperatureDict2.items():
 			if key - key2 == 0:
 				samePrimerTemp = [value, value2, key]
-				succes = True
-				return samePrimerTemp
+				success = True
+				return [success, samePrimerTemp]
 			else:
 				pass
 
-	if succes == False:
-		print("Could not find primer with the same hybridiation temperature.")
+	if success == False:
+		return [success, "Could not find primer with the same hybridiation temperature."]
 
 def primerBuild(dnaContent):
 	firstPrimer = antiSensStrandPrimer(dnaContent)

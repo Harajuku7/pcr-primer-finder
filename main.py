@@ -14,9 +14,12 @@ def main():
 		content = fastaOpen(options.filename)
 		cleanContent = fastaConvert(content)
 		result = primerBuild(cleanContent[1][options.beginRegion-1:options.endRegion-1])
-		print("Primer 1: " , result[0])
-		print("Primer 2: " , result[1])
-		print("Primer Hybridation temp: " , result[2], "°C")
+		if result[0]:
+			print("Primer 1: " , result[1][0])
+			print("Primer 2: " , result[1][1])
+			print("Primer Hybridation temp: " , result[1][2], "°C")
+		else:
+			print(result[1])
 	else:
 		p.print_help()
 
